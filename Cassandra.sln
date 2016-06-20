@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluentCassandra", "FluentCassandra", "{5FEEB0BA-1E0E-4178-BD13-1A714A79D13F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStaxCassandra", "DataStaxCassandra", "{3152D6BC-4006-4642-93F4-02B1CD484DB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{88CC96E8-8987-456F-8868-E5BBB8D56A3A}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.FluentCassandra.txt = ReadMe.FluentCassandra.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassandra", "DataStaxCassandra\Cassandra\Cassandra.csproj", "{6E8C45DA-D958-4C75-98C3-B54C883299A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassandra.Data", "DataStaxCassandra\Cassandra.Data\Cassandra.Data.csproj", "{EE00CE02-F1E6-4F7D-B43C-F6FADCE4C72B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cassandra.Data.Linq", "DataStaxCassandra\Cassandra.Data.Linq\Cassandra.Data.Linq.csproj", "{7FD62B8B-365D-48D6-8C21-2EF215294F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentCassandra", "FluentCassandra\FluentCassandra-v1.2.5-2\FluentCassandra.csproj", "{EAA32600-3C2A-4B34-B9B2-5764F280FCE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStaxCassandra.Test", "DataStaxCassandra.Test", "{60997631-1A7D-42B1-88F6-7D65022F2464}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluentCassandra.Test", "FluentCassandra.Test", "{6F16CA1C-E201-4366-99FB-499223CF2B67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStaxCassandra.Test", "DataStaxCassandra.Test\DataStaxCassandra.Test.csproj", "{573A8F1B-2C74-45E3-8E67-BB787567B693}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentCassandra.Test", "FluentCassandra.Test\FluentCassandra.Test.csproj", "{D06BA669-BBF0-4759-B79E-FCA59476C7B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{20100441-9799-4F5F-8EB5-FB16AEEC183E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E8C45DA-D958-4C75-98C3-B54C883299A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E8C45DA-D958-4C75-98C3-B54C883299A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E8C45DA-D958-4C75-98C3-B54C883299A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E8C45DA-D958-4C75-98C3-B54C883299A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE00CE02-F1E6-4F7D-B43C-F6FADCE4C72B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE00CE02-F1E6-4F7D-B43C-F6FADCE4C72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE00CE02-F1E6-4F7D-B43C-F6FADCE4C72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE00CE02-F1E6-4F7D-B43C-F6FADCE4C72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD62B8B-365D-48D6-8C21-2EF215294F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD62B8B-365D-48D6-8C21-2EF215294F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD62B8B-365D-48D6-8C21-2EF215294F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD62B8B-365D-48D6-8C21-2EF215294F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA32600-3C2A-4B34-B9B2-5764F280FCE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA32600-3C2A-4B34-B9B2-5764F280FCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA32600-3C2A-4B34-B9B2-5764F280FCE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA32600-3C2A-4B34-B9B2-5764F280FCE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573A8F1B-2C74-45E3-8E67-BB787567B693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573A8F1B-2C74-45E3-8E67-BB787567B693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573A8F1B-2C74-45E3-8E67-BB787567B693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573A8F1B-2C74-45E3-8E67-BB787567B693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06BA669-BBF0-4759-B79E-FCA59476C7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06BA669-BBF0-4759-B79E-FCA59476C7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06BA669-BBF0-4759-B79E-FCA59476C7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06BA669-BBF0-4759-B79E-FCA59476C7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20100441-9799-4F5F-8EB5-FB16AEEC183E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20100441-9799-4F5F-8EB5-FB16AEEC183E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20100441-9799-4F5F-8EB5-FB16AEEC183E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20100441-9799-4F5F-8EB5-FB16AEEC183E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EAA32600-3C2A-4B34-B9B2-5764F280FCE3} = {5FEEB0BA-1E0E-4178-BD13-1A714A79D13F}
+		{6E8C45DA-D958-4C75-98C3-B54C883299A2} = {3152D6BC-4006-4642-93F4-02B1CD484DB4}
+		{EE00CE02-F1E6-4F7D-B43C-F6FADCE4C72B} = {3152D6BC-4006-4642-93F4-02B1CD484DB4}
+		{7FD62B8B-365D-48D6-8C21-2EF215294F64} = {3152D6BC-4006-4642-93F4-02B1CD484DB4}
+		{573A8F1B-2C74-45E3-8E67-BB787567B693} = {60997631-1A7D-42B1-88F6-7D65022F2464}
+		{D06BA669-BBF0-4759-B79E-FCA59476C7B6} = {6F16CA1C-E201-4366-99FB-499223CF2B67}
+	EndGlobalSection
+EndGlobal

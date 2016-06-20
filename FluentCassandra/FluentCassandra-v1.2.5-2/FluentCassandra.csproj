@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAA32600-3C2A-4B34-B9B2-5764F280FCE3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FluentCassandra</RootNamespace>
+    <AssemblyName>FluentCassandra</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\FluentCassandra\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apache\Cassandra\AuthenticationException.cs" />
+    <Compile Include="Apache\Cassandra\AuthenticationRequest.cs" />
+    <Compile Include="Apache\Cassandra\AuthorizationException.cs" />
+    <Compile Include="Apache\Cassandra\CASResult.cs" />
+    <Compile Include="Apache\Cassandra\cassandra.Constants.cs" />
+    <Compile Include="Apache\Cassandra\Cassandra.cs" />
+    <Compile Include="Apache\Cassandra\CfDef.cs" />
+    <Compile Include="Apache\Cassandra\CfSplit.cs" />
+    <Compile Include="Apache\Cassandra\Column.cs" />
+    <Compile Include="Apache\Cassandra\ColumnDef.cs" />
+    <Compile Include="Apache\Cassandra\ColumnOrSuperColumn.cs" />
+    <Compile Include="Apache\Cassandra\ColumnParent.cs" />
+    <Compile Include="Apache\Cassandra\ColumnPath.cs" />
+    <Compile Include="Apache\Cassandra\Compression.cs" />
+    <Compile Include="Apache\Cassandra\ConsistencyLevel.cs" />
+    <Compile Include="Apache\Cassandra\CounterColumn.cs" />
+    <Compile Include="Apache\Cassandra\CounterSuperColumn.cs" />
+    <Compile Include="Apache\Cassandra\CqlMetadata.cs" />
+    <Compile Include="Apache\Cassandra\CqlPreparedResult.cs" />
+    <Compile Include="Apache\Cassandra\CqlResult.cs" />
+    <Compile Include="Apache\Cassandra\CqlResultType.cs" />
+    <Compile Include="Apache\Cassandra\CqlRow.cs" />
+    <Compile Include="Apache\Cassandra\Deletion.cs" />
+    <Compile Include="Apache\Cassandra\EndpointDetails.cs" />
+    <Compile Include="Apache\Cassandra\IndexClause.cs" />
+    <Compile Include="Apache\Cassandra\IndexExpression.cs" />
+    <Compile Include="Apache\Cassandra\IndexOperator.cs" />
+    <Compile Include="Apache\Cassandra\IndexType.cs" />
+    <Compile Include="Apache\Cassandra\InvalidRequestException.cs" />
+    <Compile Include="Apache\Cassandra\KeyCount.cs" />
+    <Compile Include="Apache\Cassandra\KeyRange.cs" />
+    <Compile Include="Apache\Cassandra\KeySlice.cs" />
+    <Compile Include="Apache\Cassandra\KsDef.cs" />
+    <Compile Include="Apache\Cassandra\Mutation.cs" />
+    <Compile Include="Apache\Cassandra\NotFoundException.cs" />
+    <Compile Include="Apache\Cassandra\SchemaDisagreementException.cs" />
+    <Compile Include="Apache\Cassandra\SlicePredicate.cs" />
+    <Compile Include="Apache\Cassandra\SliceRange.cs" />
+    <Compile Include="Apache\Cassandra\SuperColumn.cs" />
+    <Compile Include="Apache\Cassandra\TimedOutException.cs" />
+    <Compile Include="Apache\Cassandra\TokenRange.cs" />
+    <Compile Include="Apache\Cassandra\TriggerDef.cs" />
+    <Compile Include="Apache\Cassandra\UnavailableException.cs" />
+    <Compile Include="BaseCassandraColumnFamily.cs" />
+    <Compile Include="CassandraColumnFamilySchema.cs" />
+    <Compile Include="CassandraColumnFamily.cs" />
+    <Compile Include="CassandraColumnSchema.cs" />
+    <Compile Include="CassandraContext.cs" />
+    <Compile Include="CassandraException.cs" />
+    <Compile Include="CassandraKeyspace.cs" />
+    <Compile Include="CassandraKeyspaceSchema.cs" />
+    <Compile Include="CassandraSession.cs" />
+    <Compile Include="CassandraSuperColumnFamilyOperations.cs" />
+    <Compile Include="CassandraSuperColumnFamily.cs" />
+    <Compile Include="CassandraTokenRange.cs" />
+    <Compile Include="Connections\CassandraConnectionException.cs" />
+    <Compile Include="Connections\LockTimeoutException.cs" />
+    <Compile Include="Connections\InfallibleSingleServerManager.cs" />
+    <Compile Include="Connections\TSocketWithConnectTimeout.cs" />
+    <Compile Include="Connections\Connection.cs" />
+    <Compile Include="Connections\ConnectionBuilder.cs" />
+    <Compile Include="Connections\ConnectionProvider.cs" />
+    <Compile Include="Connections\ConnectionProviderFactory.cs" />
+    <Compile Include="Connections\ConnectionType.cs" />
+    <Compile Include="Connections\CqlVersion.cs" />
+    <Compile Include="Connections\IConnectionBuilder.cs" />
+    <Compile Include="Connections\ServerManagerFactory.cs" />
+    <Compile Include="Connections\SingleServerManager.cs" />
+    <Compile Include="Connections\NormalConnectionProvider.cs" />
+    <Compile Include="Connections\IConnection.cs" />
+    <Compile Include="Connections\IConnectionProvider.cs" />
+    <Compile Include="Connections\PooledConnectionProvider.cs" />
+    <Compile Include="Connections\Server.cs" />
+    <Compile Include="Connections\IServerManager.cs" />
+    <Compile Include="Connections\RoundRobinServerManager.cs" />
+    <Compile Include="Connections\TimedLock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CassandraCqlRowSchema.cs" />
+    <Compile Include="CqlHelper.cs" />
+    <Compile Include="FluentCqlRow.cs" />
+    <Compile Include="GuidGeneration.cs" />
+    <Compile Include="ILoadable.cs" />
+    <Compile Include="FluentCassandraException.cs" />
+    <Compile Include="FluentColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FluentColumnFamily.cs" />
+    <Compile Include="FluentColumnList.cs" />
+    <Compile Include="FluentColumnParent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FluentColumnPath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FluentCounterColumn.cs" />
+    <Compile Include="FluentMutation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FluentMutationTracker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FluentRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FluentSuperColumn.cs" />
+    <Compile Include="FluentSuperColumnFamily.cs" />
+    <Compile Include="GuidGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuidVersion.cs" />
+    <Compile Include="IFluentBaseColumn.cs" />
+    <Compile Include="CassandraColumnFamilyOperations.cs" />
+    <Compile Include="IFluentRecordExpression.cs" />
+    <Compile Include="Linq\CqlObjectQuery.cs" />
+    <Compile Include="Linq\ICassandraColumnFamilyInfo.cs" />
+    <Compile Include="ObjectSerializer\IObjectSerializer.cs" />
+    <Compile Include="Linq\CqlObjectQueryProvider.cs" />
+    <Compile Include="Linq\CqlQuery.cs" />
+    <Compile Include="Linq\CqlQueryEvaluator.cs" />
+    <Compile Include="Linq\CassandraColumnFamily.cs" />
+    <Compile Include="Linq\CqlQueryExtensions.cs" />
+    <Compile Include="Linq\ICqlRow.cs" />
+    <Compile Include="ObjectSerializer\ReflectionObjectSerializer.cs" />
+    <Compile Include="ObjectSerializer\ObjectSerializerFactory.cs" />
+    <Compile Include="Operations\BatchMutate.cs" />
+    <Compile Include="Operations\CassandraClientWrapper.cs" />
+    <Compile Include="Operations\CassandraColumn.cs" />
+    <Compile Include="Operations\CassandraColumnParent.cs" />
+    <Compile Include="Operations\CassandraColumnPath.cs" />
+    <Compile Include="Operations\CassandraCounterColumn.cs" />
+    <Compile Include="Operations\CassandraIndexClause.cs" />
+    <Compile Include="Operations\CassandraOperationException.cs" />
+    <Compile Include="Operations\CassandraSlicePredicateQueryable.cs" />
+    <Compile Include="Operations\CassandraQuerySetup.cs" />
+    <Compile Include="Operations\CassandraSlicePredicateBuilder.cs" />
+    <Compile Include="Operations\CassandraColumnSlicePredicate.cs" />
+    <Compile Include="Operations\AddColumn.cs" />
+    <Compile Include="Operations\ExecuteCqlNonQuery.cs" />
+    <Compile Include="Operations\ExecuteCqlQuery.cs" />
+    <Compile Include="Operations\Operation.cs" />
+    <Compile Include="Operations\CassandraIndexClauseBuilder.cs" />
+    <Compile Include="Operations\GetSuperColumnFamilyIndexedSlices.cs" />
+    <Compile Include="Operations\GetColumnFamilyIndexedSlices.cs" />
+    <Compile Include="Operations\GetSuperColumn.cs" />
+    <Compile Include="Operations\CassandraSlicePredicateQuery.cs" />
+    <Compile Include="Operations\CassandraKeyRange.cs" />
+    <Compile Include="Operations\CassandraSlicePredicate.cs" />
+    <Compile Include="Operations\ColumnCount.cs" />
+    <Compile Include="Operations\ColumnFamilyOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operations\GetColumnFamilyRangeSlices.cs" />
+    <Compile Include="Operations\GetSuperColumnFamilyRangeSlices.cs" />
+    <Compile Include="Operations\MultiGetColumnCount.cs" />
+    <Compile Include="Operations\MultiGetSuperColumnFamilySlice.cs" />
+    <Compile Include="Operations\GetColumn.cs" />
+    <Compile Include="Operations\GetColumnFamilySlice.cs" />
+    <Compile Include="Operations\GetSuperColumnFamilySlice.cs" />
+    <Compile Include="Operations\GetSuperColumnSlice.cs" />
+    <Compile Include="Operations\InsertColumn.cs" />
+    <Compile Include="Operations\MultiGetColumnFamilySlice.cs" />
+    <Compile Include="Operations\Helper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Operations\QueryableColumnFamilyOperation.cs" />
+    <Compile Include="Operations\CassandraRangeSlicePredicate.cs" />
+    <Compile Include="Operations\Remove.cs" />
+    <Compile Include="Operations\RpcApiVersion.cs" />
+    <Compile Include="Operations\SimpleOperation.cs" />
+    <Compile Include="Operations\Void.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="System\DateTimePrecise.cs" />
+    <Compile Include="Thrift\Collections\TCollections.cs" />
+    <Compile Include="Thrift\Collections\THashSet.cs" />
+    <Compile Include="Thrift\Protocol\TAbstractBase.cs" />
+    <Compile Include="Thrift\Protocol\TBase.cs" />
+    <Compile Include="Thrift\Protocol\TBase64Utils.cs" />
+    <Compile Include="Thrift\Protocol\TBinaryProtocol.cs" />
+    <Compile Include="Thrift\Protocol\TCompactProtocol.cs" />
+    <Compile Include="Thrift\Protocol\TField.cs" />
+    <Compile Include="Thrift\Protocol\TJSONProtocol.cs" />
+    <Compile Include="Thrift\Protocol\TList.cs" />
+    <Compile Include="Thrift\Protocol\TMap.cs" />
+    <Compile Include="Thrift\Protocol\TMessage.cs" />
+    <Compile Include="Thrift\Protocol\TMessageType.cs" />
+    <Compile Include="Thrift\Protocol\TMultiplexedProcessor.cs" />
+    <Compile Include="Thrift\Protocol\TMultiplexedProtocol.cs" />
+    <Compile Include="Thrift\Protocol\TProtocol.cs" />
+    <Compile Include="Thrift\Protocol\TProtocolDecorator.cs" />
+    <Compile Include="Thrift\Protocol\TProtocolException.cs" />
+    <Compile Include="Thrift\Protocol\TProtocolFactory.cs" />
+    <Compile Include="Thrift\Protocol\TProtocolUtil.cs" />
+    <Compile Include="Thrift\Protocol\TSet.cs" />
+    <Compile Include="Thrift\Protocol\TStruct.cs" />
+    <Compile Include="Thrift\Protocol\TType.cs" />
+    <Compile Include="Thrift\Server\TServer.cs" />
+    <Compile Include="Thrift\Server\TSimpleServer.cs" />
+    <Compile Include="Thrift\Server\TThreadedServer.cs" />
+    <Compile Include="Thrift\Server\TThreadPoolServer.cs" />
+    <Compile Include="Thrift\TApplicationException.cs" />
+    <Compile Include="Thrift\TException.cs" />
+    <Compile Include="Thrift\TProcessor.cs" />
+    <Compile Include="Thrift\Transport\TBufferedTransport.cs" />
+    <Compile Include="Thrift\Transport\TFramedTransport.cs" />
+    <Compile Include="Thrift\Transport\THttpClient.cs" />
+    <Compile Include="Thrift\Transport\THttpHandler.cs" />
+    <Compile Include="Thrift\Transport\TMemoryBuffer.cs" />
+    <Compile Include="Thrift\Transport\TServerSocket.cs" />
+    <Compile Include="Thrift\Transport\TServerTransport.cs" />
+    <Compile Include="Thrift\Transport\TSocket.cs" />
+    <Compile Include="Thrift\Transport\TStreamTransport.cs" />
+    <Compile Include="Thrift\Transport\TTransport.cs" />
+    <Compile Include="Thrift\Transport\TTransportException.cs" />
+    <Compile Include="Thrift\Transport\TTransportFactory.cs" />
+    <Compile Include="TimestampHelper.cs" />
+    <Compile Include="Types\AsciiType.cs" />
+    <Compile Include="Types\AsciiTypeConverter.cs" />
+    <Compile Include="System\Numerics\BigDecimal.cs" />
+    <Compile Include="Types\BytesTypeConverter.cs" />
+    <Compile Include="ColumnType.cs" />
+    <Compile Include="Types\BytesType.cs" />
+    <Compile Include="IFluentBaseColumnFamily.cs" />
+    <Compile Include="IFluentRecord.cs" />
+    <Compile Include="Types\CassandraObject.cs" />
+    <Compile Include="Types\CassandraObjectConverter.cs" />
+    <Compile Include="Types\CassandraConversionHelper.cs" />
+    <Compile Include="Types\CassandraType.cs" />
+    <Compile Include="Types\CompositeType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Types\CompositeTypeConverter.cs" />
+    <Compile Include="Types\CompositeType`1.cs" />
+    <Compile Include="Types\BooleanType.cs" />
+    <Compile Include="Types\BooleanTypeConverter.cs" />
+    <Compile Include="Types\CounterColumnType.cs" />
+    <Compile Include="Types\DateType.cs" />
+    <Compile Include="Types\DateTypeConverter.cs" />
+    <Compile Include="Types\EmptyType.cs" />
+    <Compile Include="Types\InetAddressType.cs" />
+    <Compile Include="Types\InetAddressTypeConverter.cs" />
+    <Compile Include="Types\Int32Type.cs" />
+    <Compile Include="Types\Int32TypeConverter.cs" />
+    <Compile Include="Types\FloatType.cs" />
+    <Compile Include="Types\FloatTypeConverter.cs" />
+    <Compile Include="Types\DoubleType.cs" />
+    <Compile Include="Types\DoubleTypeConverter.cs" />
+    <Compile Include="Types\DecimalType.cs" />
+    <Compile Include="Types\DecimalTypeConverter.cs" />
+    <Compile Include="Types\DynamicCompositeType.cs" />
+    <Compile Include="Types\DynamicCompositeTypeConverter.cs" />
+    <Compile Include="Types\IntegerTypeConverter.cs" />
+    <Compile Include="Types\IntegerType.cs" />
+    <Compile Include="Types\LexicalUUIDTypeConverter.cs" />
+    <Compile Include="Types\ListType.cs" />
+    <Compile Include="Types\ListTypeConverter.cs" />
+    <Compile Include="Types\LongTypeConverter.cs" />
+    <Compile Include="Types\MapType.cs" />
+    <Compile Include="Types\MapTypeConverter.cs" />
+    <Compile Include="Types\NullType.cs" />
+    <Compile Include="Types\ReversedType.cs" />
+    <Compile Include="Types\SetType.cs" />
+    <Compile Include="Types\SetTypeConverter.cs" />
+    <Compile Include="Types\TimeUUIDTypeConverter.cs" />
+    <Compile Include="Types\TypeHelper.cs" />
+    <Compile Include="Types\UTF8TypeConverter.cs" />
+    <Compile Include="Types\LexicalUUIDType.cs" />
+    <Compile Include="IFluentMutationTracker.cs" />
+    <Compile Include="MutationType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\LongType.cs" />
+    <Compile Include="Types\TimeUUIDType.cs" />
+    <Compile Include="Types\UTF8Type.cs" />
+    <Compile Include="Types\UUIDType.cs" />
+    <Compile Include="Types\UUIDTypeConverter.cs" />
+    <Compile Include="Types\VoidType.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
